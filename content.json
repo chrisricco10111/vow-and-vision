@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "tagline": "by Ricco & Kaceli"
+  },
+  "pullQuote": "We document the day as it unfolds — without interference, without performance.",
+  "intro": {
+    "work": {
+      "heading": "Work",
+      "text": "A selection of recent sessions across Italy and Europe.",
+      "link": "View work →"
+    },
+    "approach": {
+      "heading": "Approach",
+      "text": "Quiet, present, and entirely without interference.",
+      "link": "Our approach →"
+    },
+    "book": {
+      "heading": "Book",
+      "text": "A limited number of commissions each year.",
+      "link": "Get in touch →"
+    }
+  },
+  "about": {
+    "p1": "Vow & Vision is the work of Ricco & Kaceli.",
+    "p2": "We photograph weddings across Italy and Europe with a single focus: the image. Not the timeline, not the checklist — the moment of it.",
+    "p3": "Our approach is quiet and present. We move without interruption, read atmosphere before it forms, and work in existing light wherever possible.",
+    "p4": "The result is a body of work that holds.",
+    "footerLabel": "Based in Turin  ·  Available internationally"
+  },
+  "experience": {
+    "intro": "Working with us is unhurried. We plan carefully, arrive early, and disappear into the day.",
+    "preview": "A selection of images within 24 hours of the wedding.",
+    "delivery": "Full edited gallery delivered within seven days.",
+    "shortNotice": "Availability for bookings with less than 30 days notice.",
+    "closing": "Every booking includes a pre-wedding consultation, print-ready files, and a private online gallery."
+  },
+  "contact": {
+    "intro": "We take on a limited number of weddings each year. If you are considering us, we would like to hear from you.",
+    "email": "hello@vowandvision.com",
+    "instagram": "@ricco.kaceli"
+  }
+}

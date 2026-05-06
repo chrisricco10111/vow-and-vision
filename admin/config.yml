@@ -1,0 +1,79 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images
+public_folder: /images
+
+collections:
+  - name: "settings"
+    label: "Site Content"
+    files:
+      - name: "homepage"
+        label: "Homepage"
+        file: "content.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string", default: "by Ricco & Kaceli" }
+
+          - label: "Pull Quote"
+            name: "pullQuote"
+            widget: "string"
+            default: "We document the day as it unfolds — without interference, without performance."
+
+          - label: "Intro Columns"
+            name: "intro"
+            widget: "object"
+            fields:
+              - label: "Work Column"
+                name: "work"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string", default: "Work" }
+                  - { label: "Text", name: "text", widget: "string", default: "A selection of recent sessions across Italy and Europe." }
+                  - { label: "Link Label", name: "link", widget: "string", default: "View work →" }
+              - label: "Approach Column"
+                name: "approach"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string", default: "Approach" }
+                  - { label: "Text", name: "text", widget: "string", default: "Quiet, present, and entirely without interference." }
+                  - { label: "Link Label", name: "link", widget: "string", default: "Our approach →" }
+              - label: "Book Column"
+                name: "book"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string", default: "Book" }
+                  - { label: "Text", name: "text", widget: "string", default: "A limited number of commissions each year." }
+                  - { label: "Link Label", name: "link", widget: "string", default: "Get in touch →" }
+
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Paragraph 1", name: "p1", widget: "string", default: "Vow & Vision is the work of Ricco & Kaceli." }
+              - { label: "Paragraph 2", name: "p2", widget: "string", default: "We photograph weddings across Italy and Europe with a single focus: the image. Not the timeline, not the checklist — the moment of it." }
+              - { label: "Paragraph 3", name: "p3", widget: "string", default: "Our approach is quiet and present. We move without interruption, read atmosphere before it forms, and work in existing light wherever possible." }
+              - { label: "Paragraph 4", name: "p4", widget: "string", default: "The result is a body of work that holds." }
+              - { label: "Footer Label", name: "footerLabel", widget: "string", default: "Based in Turin  ·  Available internationally" }
+
+          - label: "Experience"
+            name: "experience"
+            widget: "object"
+            fields:
+              - { label: "Intro Text", name: "intro", widget: "string", default: "Working with us is unhurried. We plan carefully, arrive early, and disappear into the day." }
+              - { label: "24h Preview Text", name: "preview", widget: "string", default: "A selection of images within 24 hours of the wedding." }
+              - { label: "7-Day Delivery Text", name: "delivery", widget: "string", default: "Full edited gallery delivered within seven days." }
+              - { label: "Short Notice Text", name: "shortNotice", widget: "string", default: "Availability for bookings with less than 30 days notice." }
+              - { label: "Closing Line", name: "closing", widget: "string", default: "Every booking includes a pre-wedding consultation, print-ready files, and a private online gallery." }
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Intro Text", name: "intro", widget: "string", default: "We take on a limited number of weddings each year. If you are considering us, we would like to hear from you." }
+              - { label: "Email", name: "email", widget: "string", default: "hello@vowandvision.com" }
+              - { label: "Instagram Handle", name: "instagram", widget: "string", default: "@ricco.kaceli" }

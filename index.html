@@ -196,6 +196,7 @@
       .wg-pair, .wg-trio, .wg-asymm { grid-template-columns: 1fr; }
     }
   </style>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -225,7 +226,7 @@
   </section>
 
   <div class="hero-tagline-container">
-    <div class="tagline">by Ricco & Kaceli</div>
+    <div class="tagline" data-content="hero.tagline">by Ricco & Kaceli</div>
   </div>
 
   <section class="fade-in">
@@ -243,7 +244,7 @@
   </section>
 
   <section class="fade-in">
-    <div class="pull-quote">
+    <div class="pull-quote" data-content="pullQuote">
       We document the day as it unfolds — without interference, without performance.
     </div>
   </section>
@@ -255,20 +256,20 @@
   <section class="fade-in">
     <div class="container intro-grid">
       <div class="intro-col">
-        <h4>Work</h4>
-        <p>A selection of recent sessions across Italy and Europe.</p>
-        <a href="#work" class="subtle-link">View work →</a>
-      </div>
-      <div class="intro-col">
-        <h4>Approach</h4>
-        <p>Quiet, present, and entirely without interference.</p>
-        <a href="#about" class="subtle-link">Our approach →</a>
-      </div>
-      <div class="intro-col">
-        <h4>Book</h4>
-        <p>A limited number of commissions each year.</p>
-        <a href="#contact" class="subtle-link">Get in touch →</a>
-      </div>
+          <h4 data-content="intro.work.heading">Work</h4>
+          <p data-content="intro.work.text">A selection of recent sessions across Italy and Europe.</p>
+          <a href="#work" class="subtle-link" data-content="intro.work.link">View work →</a>
+        </div>
+        <div class="intro-col">
+          <h4 data-content="intro.approach.heading">Approach</h4>
+          <p data-content="intro.approach.text">Quiet, present, and entirely without interference.</p>
+          <a href="#about" class="subtle-link" data-content="intro.approach.link">Our approach →</a>
+        </div>
+        <div class="intro-col">
+          <h4 data-content="intro.book.heading">Book</h4>
+          <p data-content="intro.book.text">A limited number of commissions each year.</p>
+          <a href="#contact" class="subtle-link" data-content="intro.book.link">Get in touch →</a>
+        </div>
     </div>
   </section>
 
@@ -397,40 +398,40 @@
       <h1 class="page-title fade-in">About</h1>
       <div class="about-layout fade-in">
         <div class="about-text">
-          <p>Vow & Vision is the work of Ricco & Kaceli.</p>
-          <p>We photograph weddings across Italy and Europe with a single focus: the image. Not the timeline, not the checklist — the moment of it.</p>
-          <p>Our approach is quiet and present. We move without interruption, read atmosphere before it forms, and work in existing light wherever possible.</p>
-          <p>The result is a body of work that holds.</p>
+          <p data-content="about.p1">Vow & Vision is the work of Ricco & Kaceli.</p>
+          <p data-content="about.p2">We photograph weddings across Italy and Europe with a single focus: the image. Not the timeline, not the checklist — the moment of it.</p>
+          <p data-content="about.p3">Our approach is quiet and present. We move without interruption, read atmosphere before it forms, and work in existing light wherever possible.</p>
+          <p data-content="about.p4">The result is a body of work that holds.</p>
         </div>
         <div class="about-image">
           <img src="images/about.jpg" alt="Ricco & Kaceli at work" style="object-position: 67% 50%;">
         </div>
       </div>
-      <div class="about-footer-label fade-in">Based in Turin  ·  Available internationally</div>
+      <div class="about-footer-label fade-in" data-content="about.footerLabel">Based in Turin  ·  Available internationally</div>
     </div>
   </section>
 
   <section id="experience">
     <div class="container">
       <h1 class="page-title fade-in">Experience</h1>
-      <div class="exp-intro fade-in">
+      <div class="exp-intro fade-in" data-content="experience.intro">
         Working with us is unhurried. We plan carefully, arrive early, and disappear into the day.
       </div>
       <div class="exp-grid fade-in">
         <div class="exp-col">
           <h4>24h Preview</h4>
-          <p>A selection of images within 24 hours of the wedding.</p>
+          <p data-content="experience.preview">A selection of images within 24 hours of the wedding.</p>
         </div>
         <div class="exp-col">
           <h4>7-Day Delivery</h4>
-          <p>Full edited gallery delivered within seven days.</p>
+          <p data-content="experience.delivery">Full edited gallery delivered within seven days.</p>
         </div>
         <div class="exp-col">
           <h4>Short Notice</h4>
-          <p>Availability for bookings with less than 30 days notice.</p>
+          <p data-content="experience.shortNotice">Availability for bookings with less than 30 days notice.</p>
         </div>
       </div>
-      <div class="exp-hairline fade-in">
+      <div class="exp-hairline fade-in" data-content="experience.closing">
         Every booking includes a pre-wedding consultation, print-ready files, and a private online gallery.
       </div>
     </div>
@@ -441,20 +442,22 @@
       <h1 class="page-title fade-in">Contact</h1>
       <div class="contact-layout fade-in">
         <div class="contact-left">
-          <div class="contact-intro">
+          <div class="contact-intro" data-content="contact.intro">
             We take on a limited number of weddings each year. If you are considering us, we would like to hear from you.
           </div>
           <div class="contact-details">
-            <p>hello@vowandvision.com</p>
-            <p>Instagram: <a href="https://www.instagram.com/ricco.kaceli/" target="_blank" style="color: inherit; text-decoration: none;">@ricco.kaceli</a></p>
+            <p data-content="contact.email">hello@vowandvision.com</p>
+            <p>Instagram: <a href="https://www.instagram.com/ricco.kaceli/" target="_blank" style="color: inherit; text-decoration: none;" data-content="contact.instagram">@ricco.kaceli</a></p>
           </div>
         </div>
         <div class="contact-right">
-          <form class="contact-form" onsubmit="return false;">
-            <input type="text" placeholder="Your name">
-            <input type="email" placeholder="Email address">
-            <input type="text" placeholder="Wedding date">
-            <textarea placeholder="Tell us about your wedding"></textarea>
+          <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="bot-field">
+            <input type="text" name="name" placeholder="Your name">
+            <input type="email" name="email" placeholder="Email address">
+            <input type="text" name="wedding-date" placeholder="Wedding date">
+            <textarea name="message" placeholder="Tell us about your wedding"></textarea>
             <button type="submit">Send enquiry</button>
           </form>
         </div>
@@ -565,5 +568,29 @@
   });
 </script>
 
+<!-- Content loader from content.json -->
+<script>
+  fetch('/content.json')
+    .then(r => r.json())
+    .then(data => {
+      document.querySelectorAll('[data-content]').forEach(el => {
+        const keys = el.getAttribute('data-content').split('.');
+        let val = data;
+        keys.forEach(k => { if (val) val = val[k]; });
+        if (val) el.textContent = val;
+      });
+    });
+
+  // Netlify Identity redirect
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', user => {
+      if (!user) {
+        window.netlifyIdentity.on('login', () => {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
