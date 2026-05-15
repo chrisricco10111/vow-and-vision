@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="alternate" hreflang="en" href="https://www.vow-and-vision.com">
+  <link rel="alternate" hreflang="it" href="https://www.vowandvision.it">
   <title>Vow & Vision — Editorial Wedding Photography</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,7 +95,6 @@
     .work-img:hover img { transform: scale(1.02); }
     .work-label { margin-top: 12px; font-family: var(--sans); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); }
 
-    /* Work Gallery */
     .wg-full, .wg-pair, .wg-asymm, .wg-trio { padding: 0 var(--margin); margin-bottom: 48px; }
     .wg-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
     .wg-trio { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
@@ -110,7 +111,6 @@
     .wg-caption { margin-top: 10px; font-family: var(--sans); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); }
     .wg-names { }
 
-    /* Lightbox */
     .lb { display: none; position: fixed; inset: 0; background: rgba(20,20,20,0.97); z-index: 500; align-items: center; justify-content: center; }
     .lb.open { display: flex; }
     .lb-inner { position: relative; max-width: 90vw; max-height: 90vh; }
@@ -278,21 +278,14 @@
       <h1 class="page-title fade-in">Work</h1>
     </div>
 
-    <!-- WORK GRID: varied rhythm layout -->
-    <!-- To swap images: rename your file to match the filename shown in each caption -->
-
-    <!-- Row 1: Full width hero -->
     <div class="wg-full fade-in">
       <div class="wg-img" style="aspect-ratio: 16/9;">
         <img src="images/w-01.jpg" alt="">
         <div class="wg-overlay"><span class="wg-filename">w-01.jpg</span></div>
       </div>
-      <div class="wg-caption">
-        <span class="wg-names">Couple Name · Location</span>
-      </div>
+      <div class="wg-caption"><span class="wg-names">Couple Name · Location</span></div>
     </div>
 
-    <!-- Row 2: Two equal landscape -->
     <div class="wg-pair fade-in">
       <div class="wg-item">
         <div class="wg-img">
@@ -310,7 +303,6 @@
       </div>
     </div>
 
-    <!-- Row 3: Two equal -->
     <div class="wg-pair fade-in">
       <div class="wg-item">
         <div class="wg-img">
@@ -328,7 +320,6 @@
       </div>
     </div>
 
-    <!-- Row 4: Full width hero -->
     <div class="wg-full fade-in">
       <div class="wg-img" style="aspect-ratio: 16/9;">
         <img src="images/w-06.jpg" alt="">
@@ -337,7 +328,6 @@
       <div class="wg-caption"><span class="wg-names">Couple Name · Location</span></div>
     </div>
 
-    <!-- Row 5: Three equal -->
     <div class="wg-trio fade-in">
       <div class="wg-item">
         <div class="wg-img">
@@ -362,9 +352,6 @@
       </div>
     </div>
 
-
-
-    <!-- Row 7: Two equal landscape -->
     <div class="wg-pair fade-in">
       <div class="wg-item">
         <div class="wg-img">
@@ -382,7 +369,6 @@
       </div>
     </div>
 
-    <!-- Row 8: Full width closing hero -->
     <div class="wg-full fade-in">
       <div class="wg-img" style="aspect-ratio: 3/2;">
         <img src="images/w-14.jpg" alt="">
@@ -393,7 +379,7 @@
 
   </section>
 
-    <section id="about">
+  <section id="about">
     <div class="container">
       <h1 class="page-title fade-in">About</h1>
       <div class="about-layout fade-in">
@@ -407,7 +393,7 @@
           <img src="images/about.jpg" alt="Ricco & Kaceli at work" style="object-position: 67% 50%;">
         </div>
       </div>
-      <div class="about-footer-label fade-in" data-content="about.footerLabel">Based in Turin  ·  Available internationally</div>
+      <div class="about-footer-label fade-in" data-content="about.footerLabel">Based in Turin · Available internationally</div>
     </div>
   </section>
 
@@ -474,29 +460,19 @@
 
 <script>
   const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  });
-
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
   const menuBtn = document.getElementById('menuBtn');
   const closeMenuBtn = document.getElementById('closeMenu');
   const mobileNav = document.getElementById('mobileNav');
   menuBtn.addEventListener('click', () => mobileNav.classList.add('open'));
   closeMenuBtn.addEventListener('click', closeMobileNav);
   function closeMobileNav() { mobileNav.classList.remove('open'); }
-
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
-<!-- Lightbox -->
 <div class="lb" id="lightbox">
   <span class="lb-close" id="lb-close">Close ✕</span>
   <span class="lb-prev" id="lb-prev">← Prev</span>
@@ -508,13 +484,10 @@
 </div>
 
 <script>
-  // Lightbox
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lb-img');
   const lbCaption = document.getElementById('lb-caption');
-  let images = [];
-  let current = 0;
-
+  let images = []; let current = 0;
   function buildImageList() {
     images = [];
     document.querySelectorAll('.wg-img').forEach(el => {
@@ -523,43 +496,13 @@
       images.push({ src: img.src, caption });
     });
   }
-
-  function openLightbox(index) {
-    buildImageList();
-    current = index;
-    showImage();
-    lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function showImage() {
-    lbImg.src = images[current].src;
-    lbCaption.textContent = images[current].caption;
-  }
-
-  document.querySelectorAll('.wg-img').forEach((el, i) => {
-    el.addEventListener('click', () => openLightbox(i));
-  });
-
-  document.getElementById('lb-close').addEventListener('click', () => {
-    lb.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-
-  document.getElementById('lb-prev').addEventListener('click', () => {
-    current = (current - 1 + images.length) % images.length;
-    showImage();
-  });
-
-  document.getElementById('lb-next').addEventListener('click', () => {
-    current = (current + 1) % images.length;
-    showImage();
-  });
-
-  lb.addEventListener('click', e => {
-    if (e.target === lb) { lb.classList.remove('open'); document.body.style.overflow = ''; }
-  });
-
+  function openLightbox(index) { buildImageList(); current = index; showImage(); lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function showImage() { lbImg.src = images[current].src; lbCaption.textContent = images[current].caption; }
+  document.querySelectorAll('.wg-img').forEach((el, i) => { el.addEventListener('click', () => openLightbox(i)); });
+  document.getElementById('lb-close').addEventListener('click', () => { lb.classList.remove('open'); document.body.style.overflow = ''; });
+  document.getElementById('lb-prev').addEventListener('click', () => { current = (current - 1 + images.length) % images.length; showImage(); });
+  document.getElementById('lb-next').addEventListener('click', () => { current = (current + 1) % images.length; showImage(); });
+  lb.addEventListener('click', e => { if (e.target === lb) { lb.classList.remove('open'); document.body.style.overflow = ''; } });
   document.addEventListener('keydown', e => {
     if (!lb.classList.contains('open')) return;
     if (e.key === 'ArrowLeft') { current = (current - 1 + images.length) % images.length; showImage(); }
@@ -568,7 +511,6 @@
   });
 </script>
 
-<!-- Content loader from content.json -->
 <script>
   fetch('/content.json')
     .then(r => r.json())
@@ -580,15 +522,9 @@
         if (val) el.textContent = val;
       });
     });
-
-  // Netlify Identity redirect
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on('init', user => {
-      if (!user) {
-        window.netlifyIdentity.on('login', () => {
-          document.location.href = '/admin/';
-        });
-      }
+      if (!user) { window.netlifyIdentity.on('login', () => { document.location.href = '/admin/'; }); }
     });
   }
 </script>
